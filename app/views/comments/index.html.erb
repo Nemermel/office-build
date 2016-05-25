@@ -1,0 +1,13 @@
+<div class="container-fluid">
+	<% @comments.each do |comment| %>
+	<h3>
+		Title: <%= comment.title %>
+	</h3>
+	<h3>
+		Text: <%= comment.context %>
+	</h3>
+	<%end%>
+	<p>
+		<%= link_to "New Comment", new_comment_path %>
+	</p>
+</div>

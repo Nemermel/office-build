@@ -1,0 +1,13 @@
+<div class="container-fluid">
+	<% @users.each do |user| %>
+	<h3>
+		Name: <%= user.name %>
+	</h3>
+	<h3>
+		Email: <%= user.email %>
+	</h3>
+	<%end%>
+	<p>
+		<%= link_to "New User", new_user_path %>
+	</p>
+</div>
