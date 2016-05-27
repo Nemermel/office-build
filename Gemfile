@@ -21,6 +21,10 @@ gem 'jquery-ui-rails'
 
 gem 'bootstrap-sass'
 
+gem 'bcrypt'
+
+gem 'fittextjs_rails'
+
 group :development do
   gem 'rails_layout'
 end

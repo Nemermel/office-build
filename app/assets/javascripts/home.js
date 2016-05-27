@@ -3,10 +3,10 @@ $(document).ready(function() {
     //Navigation
     menu: '#menu',
     lockAnchors: false,
-    anchors:['firstPage', 'secondPage','thirdPage','fourthPage'],
+    anchors:['firstPage', 'secondPage','thirdPage','fourthPage','fifthPage'],
     navigation: true,
     navigationPosition: 'right',
-    navigationTooltips: ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide'],
+    navigationTooltips: ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fifthSlide'],
     showActiveTooltip: true,
     slidesNavigation: true,
     slidesNavPosition: 'bottom',
@@ -17,7 +17,7 @@ $(document).ready(function() {
     fixedElements: '#header, .footer',
     responsiveWidth: 0,
     responsiveHeight: 0,
-    sectionsColor : ['#ccc', '#faa','#ccc','#fff'],
+    sectionsColor : ['#ccc', '#faa','#e0e0e0','#fff','#fff'],
     //Events
     afterLoad: function(anchorLink, index){
         console.log(anchorLink);
@@ -51,4 +51,9 @@ $(document).ready(function() {
         console.log("click");
         $('.modal-login').show();
     });
+
+    jQuery(".section-home-info>h1").fitText(1.2, { minFontSize: '30px', maxFontSize: '50px' });
+    jQuery(".section-home-info>p").fitText(1.2, { minFontSize: '15px', maxFontSize: '19px' });
+    jQuery(".section-home-info>h4").fitText(1.2, { minFontSize: '18px', maxFontSize: '21px' });
+
 });

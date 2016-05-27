@@ -4,4 +4,11 @@ class UserTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+  def setup
+    
+  end
+
+  test "should be valid" do
+    assert @user.valid?
+  end
 end
