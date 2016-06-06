@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    console.log($("body").width());
+    if ($("body").width() < 600) {
+        console.log("poink");
+    }
   $('#fullpage').fullpage({
     //Navigation
     menu: '#menu',
@@ -10,6 +14,7 @@ $(document).ready(function() {
     showActiveTooltip: true,
     slidesNavigation: true,
     slidesNavPosition: 'bottom',
+    autoScrolling: false,
     //Design
     controlArrows: true,
     verticalCentered: false,
@@ -17,7 +22,7 @@ $(document).ready(function() {
     fixedElements: '#header, .footer',
     responsiveWidth: 0,
     responsiveHeight: 0,
-    sectionsColor : ['#ccc', '#faa','#e0e0e0','#fff','#fff'],
+    sectionsColor : ['#ccc', '#3357a1','#e0e0e0','#fff','#fff'],
     //Events
     afterLoad: function(anchorLink, index){
         console.log(anchorLink);
