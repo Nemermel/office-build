@@ -14,7 +14,8 @@ $(document).ready(function() {
     showActiveTooltip: true,
     slidesNavigation: true,
     slidesNavPosition: 'bottom',
-    autoScrolling: false,
+    scrollOverflow: true,
+    //autoScrolling: false,
     //Design
     controlArrows: true,
     verticalCentered: false,
