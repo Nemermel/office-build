@@ -43,6 +43,7 @@ transform:translatey(-100px);
 -webkit-transition:all .2s ease-in-out;
 transition:all .2s ease-in-out;
 padding:10px;
+padding-bottom: 2px;
 }
 
 .hovereffect p {
@@ -50,14 +51,14 @@ color:#fff;
 text-align:left;
 position:relative;
 font-family: Raleway-Regular;
-font-size:17px;
+font-size:15px;
 -webkit-transform:translatey(-100px);
 -ms-transform:translatey(-100px);
 transform:translatey(-100px);
 -webkit-transition:all .2s ease-in-out;
 transition:all .2s ease-in-out;
 padding: 10px;
-padding-top: 5px
+padding-top: 0px
 }
 
 .hovereffect a.info {

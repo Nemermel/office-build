@@ -7,10 +7,10 @@ $(document).ready(function() {
     //Navigation
     menu: '#menu',
     lockAnchors: false,
-    anchors:['firstPage', 'secondPage','thirdPage','fourthPage','fifthPage'],
+    anchors:['firstPage', 'secondPage','thirdPage','fourthPage','fifthPage','sixthPage'],
     navigation: true,
     navigationPosition: 'right',
-    navigationTooltips: ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fifthSlide'],
+    navigationTooltips: ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fifthSlide', 'sixthSlide'],
     showActiveTooltip: true,
     slidesNavigation: true,
     slidesNavPosition: 'bottom',
@@ -22,7 +22,7 @@ $(document).ready(function() {
     fixedElements: '#header, .footer',
     responsiveWidth: 0,
     responsiveHeight: 0,
-    sectionsColor : ['#ccc', '#3357a1','#e0e0e0','#fff','#fff'],
+    sectionsColor : ['#ccc', '#3357a1','#e0e0e0','#efefef','#e0e0e0', '#e0e0e0'],
     //Events
     afterLoad: function(anchorLink, index){
         console.log(anchorLink);

@@ -18,6 +18,11 @@
   font-family: PDF;
   src: url(fonts/pfdintextcondpro-bold.ttf);
 }
+
+@font-face {
+  font-family:PDF-Medium;
+  src:url(fonts/pfdintextcondpro-medium.ttf);
+}
 @font-face {
   font-family: Raleway-Regular;
   src: url(fonts/RalewayRegular.ttf);
@@ -31,4 +36,8 @@
 @font-face {
 	font-family:Raleway-SemiBold;
 	src:url(fonts/RalewaySemiBold.ttf);
+}
+@font-face {
+	font-family:PDF-Regular;
+	src:url(fonts/pfdintextcondpro-regular.ttf);
 }
