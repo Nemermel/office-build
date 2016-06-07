@@ -1,21 +1,28 @@
 $(document).ready(function() {
+    var menu = null;
+    var visible = 0;
     console.log($("body").width());
     if ($("body").width() < 600) {
-        console.log("poink");
+        menu = false;
+        console.log(menu);
+        visible = 1;
+    } else {
+        menu = true;
+        console.log(menu);
+        visible = 3;
     }
   $('#fullpage').fullpage({
     //Navigation
     menu: '#menu',
     lockAnchors: false,
     anchors:['firstPage', 'secondPage','thirdPage','fourthPage','fifthPage','sixthPage'],
-    navigation: true,
+    navigation: menu,
     navigationPosition: 'right',
     navigationTooltips: ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fifthSlide', 'sixthSlide'],
     showActiveTooltip: true,
     slidesNavigation: true,
     slidesNavPosition: 'bottom',
     scrollOverflow: true,
-    //autoScrolling: false,
     //Design
     controlArrows: true,
     verticalCentered: false,
@@ -48,8 +55,8 @@ $(document).ready(function() {
     jQuery('.slider').lbSlider({
         leftBtn: '.sa-left',
         rightBtn: '.sa-right',
-        visible: 3,
-        autoPlay: true,
+        visible: visible,
+        autoPlay: false,
         autoPlayDelay: 5
     });
 

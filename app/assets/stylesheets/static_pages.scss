@@ -233,6 +233,9 @@ h1{
   .second-section{
     .second-section-about{
       width: 90%;
+      h4{
+        margin-top: 6%;
+      }
     }
   }
   .section-third-content{
@@ -269,6 +272,8 @@ h1{
   .section-fourth{
     .section-fourth-content{
       width: 100%;
+      position: relative;
+      top: 40px;
       h1{
         margin-left: 8%;
       }
@@ -407,7 +412,7 @@ h1{
 
 .slider {
   position: relative;
-  width: 800px;
+  width: 60%;
   margin: auto;
 }
 
@@ -484,6 +489,21 @@ ul li .item {
 }
 
 .sa-right {
-  right: 34px;
+  right: 0px;
 }
 
+#buisness-center-map {
+        height:400px;
+        width:400px;
+    }
+    .gm-style-iw * {
+        display: block;
+        width: 100%;
+    }
+    .gm-style-iw h4, .gm-style-iw p {
+        margin: 0;
+        padding: 0;
+    }
+    .gm-style-iw a {
+        color: #4272db;
+    }
