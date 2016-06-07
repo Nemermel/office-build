@@ -8,7 +8,13 @@ class SessionsController < ApplicationController
     if user && password #user.authenticate(params[:session][:password])
       # Log the user in and redirect to the user's show page.
       log_in user
-      redirect_to comments_url
+      if user = 'admin'
+        redirect_to offices_url
+      else
+        redirect_to comments_url
+      end
+
+
     else
       # Create an error message.
       flash[:danger] = 'Invalid name/password combination' # Not quite right!
