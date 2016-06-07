@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @office.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @office.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @office.image.url %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @office.cost %>
+</p>
+
+<%= link_to 'Edit', edit_office_path(@office) %> |
+<%= link_to 'Back', offices_path %>

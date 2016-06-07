@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :offices
   get 'sessions/new'
 
   get 'sessions/new'

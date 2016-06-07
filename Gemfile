@@ -25,6 +25,10 @@ gem 'bcrypt'
 
 gem 'fittextjs_rails'
 
+gem 'carrierwave', '~> 0.10.0'
+
+gem 'mini_magick', '~> 4.3'
+
 group :development do
   gem 'rails_layout'
 end
@@ -55,4 +59,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
