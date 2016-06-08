@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    $('#fp-nav ul li a').css('background', 'black');
     var menu = null;
     var visible = 0;
     console.log($("body").width());
@@ -18,7 +19,7 @@ $(document).ready(function() {
     anchors:['firstPage', 'secondPage','thirdPage','fourthPage','fifthPage','sixthPage'],
     navigation: menu,
     navigationPosition: 'right',
-    navigationTooltips: ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide', 'fifthSlide', 'sixthSlide'],
+    navigationTooltips: ['Главная', 'О компании', 'Инфраструктура', 'Услуги', 'Свободные Помещения', 'Контакты'],
     showActiveTooltip: true,
     slidesNavigation: true,
     slidesNavPosition: 'bottom',

@@ -1,3 +1,39 @@
 // Place all the styles related to the Offices controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+main{
+	background: white;
+	.cms-wrap{
+		color: #3357a1;
+		h1{
+			font-family: PDF;
+		}
+		h2:first-of-type{
+			font-family: PDF-Medium;
+      color: #3357a1;	
+		}
+		p{
+			color: black;
+			font-family: Raleway-Regular;
+		}
+		.row{
+			width: 100%;
+			.left{
+				background-color: white;
+				.table-headings{
+					color: #3357a1;
+					h3{
+						font-family: PDF-Medium;
+					}
+				}
+				.table-body{
+					color: black;
+					.table-element{
+						border: 4px solid #3357a1;
+						padding: 20px;
+					}
+				}
+			}
+		}
+	}
+}

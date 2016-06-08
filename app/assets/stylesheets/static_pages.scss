@@ -12,6 +12,14 @@ h1{
 	margin-top: 0;
 }
 
+#fp-nav ul li .fp-tooltip{
+  color: black;
+}
+
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span{
+  background: black;
+}
+
 .main-wrap{
 	width: 100%;
 	padding: 0;
@@ -30,7 +38,6 @@ h1{
     z-index: 0;
   }
   .section-home-info{
-    width: 44.236111111%;
     position: relative;
     height: 100%;
     background-color: rgba(51, 87, 161, 0.75);
@@ -48,6 +55,7 @@ h1{
     }
     p{
       font-family: Raleway-Regular;
+      line-height: 1.5;
       padding: 20px 50px 0 26%;
       font-size: 17px;
     }
@@ -55,6 +63,12 @@ h1{
   .comments{
     position: absolute;
     right: 20px; top: 20px;
+    img{
+      opacity: 0.5;
+    }
+    img:hover{
+      opacity: 1;
+    }
   }
 }
 
@@ -152,6 +166,8 @@ h1{
           font-family: PDF-Regular;
           font-size: 20px;
           margin-top: 20px;
+          letter-spacing: 0.5px;
+          line-height: 25px;
         }
       }
     }
@@ -187,48 +203,6 @@ h1{
           }
         }
       }
-    }
-  }
-}
-
-.sixth-section{
-  .back-2{
-    position: absolute;
-    left: 0; top: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .sixth-section-content{
-    width: 100%;
-    position: relative;
-    height: 100%;
-    background-color: rgba(51, 87, 161, 0.75);
-    color: white;
-    .content-header{
-      position: relative;
-      top: 13.020833333%;
-      left: 20.138888889%;
-      h1{
-        font-family: PDF-Medium;
-        font-size: 45px;
-      }
-    }
-    .content-text{
-      width: 35%;
-      position: relative;
-      left: 20.138888889%;
-      top: 23.69%;
-      h2{
-        font-family: PDF-Regular;
-        font-size: 30px;
-        letter-spacing: 1.5px;
-      }
-    }
-    .content-map{
-      position: absolute;
-      right: 20%;
-      top: 29.6875%;
-      width: 20%;
     }
   }
 }
@@ -275,6 +249,7 @@ h1{
     margin: 0 auto;
     width: 90%;
     top: 40px;
+    padding-bottom: 100px;
     h1{
       margin-bottom:20px;
     }
@@ -293,6 +268,7 @@ h1{
     }
     .flex-2{
       flex-wrap: wrap;
+      padding-bottom: 40px;
       li{
         max-width: 40%;
         box-sizing: border-box;
@@ -303,13 +279,16 @@ h1{
   }
   .section-fourth{
     .section-fourth-content{
+      padding-bottom: 40px;
       width: 100%;
       position: relative;
       top: 40px;
       h1{
+        padding-top: 20px;
         margin-left: 8%;
       }
       .flex-1{
+        padding-bottom: 80px;
         .flex-block{
           width: 50%;
           .flex-block-text{
@@ -328,14 +307,18 @@ h1{
     }
   }
   .fifth-section{
-    h1{
-      color: #3357a1;
-      font-family: PDF;
+    .fifth-section-header{
       position: relative;
-      text-align: center;
       top: 6%;
+      padding-top: 30px;
+      h1{
+        color: #3357a1;
+        font-family: PDF;
+        text-align: center;       
+      }
     }
     .slider-wrap{
+      padding-bottom: 40px;
       .slider{
         ul{
           li{
@@ -350,11 +333,241 @@ h1{
       }
     }
   }
+  .sixth-section{
+    .back-2{
+      position: absolute;
+      left: 0; top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .sixth-section-content{
+      width: 100%;
+      position: relative;
+      height: 100%;
+      background-color: rgba(51, 87, 161, 0.75);
+      color: white;
+      .content-header{
+        position: relative;
+        top: 13.020833333%;
+        left: 5.138888889%;
+        h1{
+          font-family: PDF-Medium;
+          font-size: 45px;
+        }
+      }
+      .content-text{
+        width: 90%;
+        position: relative;
+        left: 5.138888889%;
+        top: 18.89%;
+        h2{
+          font-family: PDF-Regular;
+          font-size: 30px;
+          letter-spacing: 1.5px;
+        }
+      }
+      .content-map{
+        position: relative;
+        left: 0; right: 0;
+        margin: 0 auto;
+        bottom: -22%;
+        width: 100%;
+        #buisness-center-map{
+          position: relative;
+          left: 0;right: 0;
+          margin: 0 auto;
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+  }
 }
 
-@media only screen and (min-width: 681px) and (max-width: 1440px){
+@media only screen and (min-width:680px) and (max-width: 799px){
   .home{
     .section-home-info{
+      width: 63.764705882%;
+      h1{
+        padding: 0 0px 0 26%;
+        font-family: PDF;
+      }
+      h2{
+        font-family: Raleway-Bold;
+      }
+      h4{
+        font-family: Raleway-Bold;
+        padding: 10px 50px 0 26%;
+        line-height: 1.5;
+      }
+      p{
+        font-family: Raleway-Regular;
+        padding: 20px 50px 0 26%;
+        font-size: 17px;
+      }
+      h1:first-of-type{
+        padding-top: 150px;
+      }
+    }
+  }
+  .second-section{
+    .second-section-about{
+      width: 59.722222222%;
+      h4{
+        margin-top: 30px;
+        line-height: 1.5;
+      }
+      img{
+        margin-top: 20px;
+        display: block;
+      }
+    }
+  }
+  .section-third{
+    .section-third-content{
+      top: 5.208333333%;
+      width: 90%;
+      left: 0; right: 0;
+      margin: 0 auto;
+      h1{
+        margin-bottom: 100px;
+      }
+      .flex-1,.flex-2{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+      // position: relative;
+      // left: 0; right: 0;
+      // margin: 0 auto;
+      width: 100%;
+    }
+    .flex-1{
+      li{
+        max-width: 400px;
+        box-sizing: border-box;
+        padding: 1em;
+        min-width: 1%;
+      }
+    }
+    .flex-2{
+      li{
+        max-width: 400px;
+        box-sizing: border-box;
+        padding: 1em;
+        min-width: 1%;
+      }
+    }
+    .flex-1 img,.flex-2 img{max-width: 100%;}
+  }
+}
+.section-fourth{
+  .section-fourth-content{
+    width: 90%;
+    position: relative;
+    top: 7%;
+    h1{
+      position: relative;
+      left: 5.21%;
+    }
+    .flex-1{
+      .flex-block{
+        width: 33.3333333%;
+        .flex-block-text{
+          position: relative;
+          left: 0; right: 0;
+          margin: 0 auto;
+          width: 46%;
+        }
+      }
+      .flex-block:nth-of-type(n+3){
+        margin-top: 67px;
+      }
+    }
+  }
+}
+.fifth-section{
+  h1{
+    color: #3357a1;
+    font-family: PDF;
+    position: relative;
+    left: 20.138888889%;
+    top: 6%;
+  }
+  .slider-wrap{
+    position: relative;
+    top: 20%;
+    .slider{
+      width: 90%;
+      ul{
+        li{
+          .item{
+            .slider-text-block{
+              width: 100%;
+              height: 50%;
+              h5{
+                color: #3357a1;
+              }
+            }
+            .slider-image{
+              position: relative;
+              bottom: 5px;
+              height: 50%;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.sixth-section{
+  .back-2{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .sixth-section-content{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    background-color: rgba(51, 87, 161, 0.75);
+    color: white;
+    .content-header{
+      position: relative;
+      top: 13.020833333%;
+      left: 20.138888889%;
+      h1{
+        font-family: PDF-Medium;
+        font-size: 45px;
+      }
+    }
+    .content-text{
+      width: 35%;
+      position: relative;
+      left: 20.138888889%;
+      top: 18.89%;
+      h2{
+        font-family: PDF-Regular;
+        font-size: 30px;
+        letter-spacing: 1.5px;
+      }
+    }
+    .content-map{
+      position: relative;
+      left: 20%;
+      bottom: -22%;
+      width: 20%;
+    }
+  }
+}
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1440px){
+  .home{
+    .section-home-info{
+      width: 44.236111111%;
       h1{
         padding: 0 0px 0 26%;
         font-family: PDF;
@@ -426,63 +639,104 @@ h1{
   }
 }
 .section-fourth{
-    .section-fourth-content{
-      width: 90%;
+  .section-fourth-content{
+    width: 90%;
+    position: relative;
+    top: 7%;
+    h1{
       position: relative;
-      top: 7%;
-      h1{
-        position: relative;
-        left: 5.21%;
+      left: 5.21%;
+    }
+    .flex-1{
+      .flex-block{
+        width: 33.3333333%;
+        .flex-block-text{
+          position: relative;
+          left: 0; right: 0;
+          margin: 0 auto;
+          width: 46%;
+        }
       }
-      .flex-1{
-        .flex-block{
-          width: 33.3333333%;
-          .flex-block-text{
-            position: relative;
-            left: 0; right: 0;
-            margin: 0 auto;
-            width: 46%;
-          }
-        }
-        .flex-block:nth-of-type(n+3){
-          margin-top: 67px;
-        }
+      .flex-block:nth-of-type(n+3){
+        margin-top: 67px;
       }
     }
   }
-  .fifth-section{
-    h1{
-      color: #3357a1;
-      font-family: PDF;
-      position: relative;
-      left: 20.138888889%;
-      top: 6%;
-    }
-    .slider-wrap{
-      .slider{
-        width: 75%;
-        ul{
-          li{
-            .item{
-              .slider-text-block{
-                width: 100%;
-                height: 50%;
-                h5{
-                  color: #3357a1;
-                }
+}
+.fifth-section{
+  h1{
+    color: #3357a1;
+    font-family: PDF;
+    position: relative;
+    left: 20.138888889%;
+    top: 6%;
+  }
+  .slider-wrap{
+    .slider{
+      width: 75%;
+      ul{
+        li{
+          .item{
+            .slider-text-block{
+              width: 100%;
+              height: 50%;
+              h5{
+                color: #3357a1;
               }
-              .slider-image{
-                position: relative;
-                bottom: 5px;
-                height: 50%;
-                width: 100%;
-              }
+            }
+            .slider-image{
+              position: relative;
+              bottom: 5px;
+              height: 50%;
+              width: 100%;
             }
           }
         }
       }
     }
   }
+}
+.sixth-section{
+  .back-2{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .sixth-section-content{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    background-color: rgba(51, 87, 161, 0.75);
+    color: white;
+    .content-header{
+      position: relative;
+      top: 13.020833333%;
+      left: 20.138888889%;
+      h1{
+        font-family: PDF-Medium;
+        font-size: 45px;
+      }
+    }
+    .content-text{
+      width: 35%;
+      position: relative;
+      left: 20.138888889%;
+      top: 18.89%;
+      h2{
+        font-family: PDF-Regular;
+        font-size: 30px;
+        letter-spacing: 1.5px;
+      }
+    }
+    .content-map{
+      position: absolute;
+      right: 25%;
+      top: 29.6875%;
+      width: 20%;
+    }
+  }
+}
 }
 
 
@@ -581,17 +835,17 @@ ul li .item {
 }
 
 #buisness-center-map {
-        height:400px;
-        width:400px;
-    }
-    .gm-style-iw * {
-        display: block;
-        width: 100%;
-    }
-    .gm-style-iw h4, .gm-style-iw p {
-        margin: 0;
-        padding: 0;
-    }
-    .gm-style-iw a {
-        color: #4272db;
-    }
+  height:400px;
+  width:400px;
+}
+.gm-style-iw * {
+  display: block;
+  width: 100%;
+}
+.gm-style-iw h4, .gm-style-iw p {
+  margin: 0;
+  padding: 0;
+}
+.gm-style-iw a {
+  color: #4272db;
+}
