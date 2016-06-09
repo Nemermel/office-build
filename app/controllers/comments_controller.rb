@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
   def index
-    @comments = Comment.all
+    # @comments = Comment.all
+    @comments = Comment.order('created_at DESC')
+    @comment = Comment.new
   end
 
   def show
@@ -15,7 +17,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
 
     @comment.save
-    redirect_to @comment
+    redirect_to comments_path
   end
 
 private def comment_params

@@ -6,11 +6,12 @@ class SessionsController < ApplicationController
   	user = User.find_by(name: params[:session][:name].downcase)
   	password = User.find_by(password: params[:session][:password])
     if user && password #user.authenticate(params[:session][:password])
-      # Log the user in and redirect to the user's show page.
-      log_in user
-      if user = 'admin'
+      # Log the user in and redirect to the user's show page.      
+      if user.name.eql? 'admin'
+        log_in user
         redirect_to offices_url
       else
+        log_in user
         redirect_to comments_url
       end
 

@@ -1,9 +1,10 @@
-<p id="notice"><%= notice %></p>
+<% if admin? %>
 <div class="cms-wrap">
   <div class="row">
-    <div class="left col-lg-7">
+    <div class="left col-lg-6 col-lg-offset-1">
       <div class="cms-heading">
         <h1>44 CENTER</h1>
+        <p id="notice"><%= notice %></p>
         <h2>Система управления контентом</h2>
         <p>Тут вы можете редактировать карточки помешений из блока "Свободные помещения"</p>
       </div>
@@ -17,27 +18,49 @@
         </div>
         <div class="table-body">
           <%@offices.each do |office| %>
-            <div class="table-element">
-              <div class="row">
-                <div class="col-lg-4">
-                  <p><%= office.cost %></p>
-                </div>
-                <div class="col-lg-4">
-                  <p><%= office.description %></p>
-                </div>
-                <div class="col-lg-4">
-                  <p><%= image_tag office.image.url %><%= link_to image_tag("trash.svg"), office, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-                </div>
+          <div class="table-element">
+            <div class="row">
+              <div class="col-lg-4">
+                <p><%= office.cost %> грн. /м²/месяц</p>
+              </div>
+              <div class="col-lg-4">
+                <p><%= office.description %></p>
+              </div>
+              <div class="col-lg-4">
+                <p><%= image_tag office.image.url %><%= link_to image_tag("trash.svg"), office, method: :delete, data: { confirm: 'Are you sure?' } %></p>
               </div>
             </div>
+          </div>
           <%end%>
         </div>
       </div>
     </div>
     <div class="right col-lg-5">
+      <h3 style="text-align: right;">
+        <%= link_to "Выйти", logout_path, method: "delete" %>
+        <%= link_to "Комментарии", comments_path %>
+      </h3>
+      <h1>Добавить новую карточку</h1>
+      <%= form_for @office do |f| %>
+      <div class="form-group">
+        <h2>Заголовок <span>(максимум 20 символов)</span></h2>
+        <%= f.text_field :cost, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <h2>Описание <span>(максимум 120 символов)</span></h2>
+        <%= f.text_field :description, class: "form-control" %>
+      </div>    
+      <div class="form-group">
+        <h2>Добавить фото</h2>
+        <%= f.file_field :image, class: "form-control" %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Подтвердить"%>
+      </div>
+      <% end %>
     </div>
   </div>
-
 </div>
-
-<%= link_to 'New Office', new_office_path %>
+<% else %>
+<h1>You're not allowed to this page</h1>
+<% end %>

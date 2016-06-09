@@ -5,6 +5,8 @@ class OfficesController < ApplicationController
   # GET /offices.json
   def index
     @offices = Office.all
+
+    @office = Office.new
   end
 
   # GET /offices/1
@@ -28,11 +30,9 @@ class OfficesController < ApplicationController
 
     respond_to do |format|
       if @office.save
-        format.html { redirect_to @office, notice: 'Office was successfully created.' }
-        format.json { render :show, status: :created, location: @office }
+        format.html { redirect_to offices_path, notice: 'Office was successfully created.' }
       else
-        format.html { render :new }
-        format.json { render json: @office.errors, status: :unprocessable_entity }
+        format.html { redirect_to offices_path, notice: 'There was an error on office creation.' }
       end
     end
   end

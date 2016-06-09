@@ -11,8 +11,17 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  def set_admin
+    @admin = true
+  end
+
+  def admin?
+    current_user.name.eql? 'admin'
+  end
+
   def log_out
     session.delete(:user_id)
     @current_user = nil
+    @admin = false
   end
 end
