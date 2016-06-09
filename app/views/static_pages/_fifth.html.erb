@@ -5,19 +5,12 @@
 	<div class='slider-wrap'>
     <div class='slider'>
       <ul>
-        <li>
-         <div class='item'>
-          <a href='#'>
-           <div class='view-profile'>View Profile</div>
-         </a>
-       </div>
-     </li>
      <% @offices.each do |office| %>
 		 <li>
 		 	<div class="item">
 				<div class="slider-text-block">
-					<h5><%= office.cost %> грн. /м²/месяц</h5>
-					<p><%= office.description %></p>
+					<h5 class="text-left"><%= office.cost %> грн. /м²/месяц</h5>
+					<p class="text-left"><%= office.description %></p>
 				</div>
  				<%= image_tag office.image.url, class:"slider-image" %>
 		 	</div>
