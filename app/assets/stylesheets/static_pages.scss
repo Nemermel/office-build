@@ -55,9 +55,8 @@ h1{
     }
     p{
       font-family: Raleway-Regular;
-      line-height: 1.5;
       padding: 20px 50px 0 26%;
-      font-size: 17px;
+      font-weight: normal;
     }
   }
   .comments{
@@ -232,8 +231,9 @@ h1{
         padding: 10px 50px 0 3.789473684%;
       }
       p{
-        padding: 20px 50px 0 3.789473684%;
-        font-size: 17px;
+        padding: 20px 0 0 3.789473684%;
+        font-size: 8px;
+        line-height: 1.3
       }
       h1:first-of-type{
         padding-top: 20px;
@@ -345,7 +345,8 @@ h1{
       height: 100%;
     }
     .sixth-section-content{
-      padding-top: 20px;
+      padding-bottom: 150px;
+      padding-top: 10px;
       width: 100%;
       position: relative;
       height: 100%;
@@ -353,7 +354,7 @@ h1{
       color: white;
       .content-header{
         position: relative;
-        top: 13.020833333%;
+        top: 5.020833333%;
         left: 5.138888889%;
         h1{
           font-family: PDF-Medium;
@@ -364,7 +365,7 @@ h1{
         width: 90%;
         position: relative;
         left: 5.138888889%;
-        top: 18.89%;
+        top: 6.89%;
         h2{
           font-family: PDF-Regular;
           font-size: 30px;
@@ -375,7 +376,7 @@ h1{
         position: relative;
         left: 0; right: 0;
         margin: 0 auto;
-        bottom: -22%;
+        bottom: -13%;
         width: 100%;
         #buisness-center-map{
           position: relative;
@@ -389,12 +390,12 @@ h1{
   }
 }
 
-@media only screen and (min-width:680px) and (max-width: 799px){
+@media only screen and (min-width:680px) and (max-width: 900px){
   .home{
     .section-home-info{
       width: 63.764705882%;
       h1{
-        padding: 0 0px 0 26%;
+        padding: 0 0px 0 4%;
         font-family: PDF;
       }
       h2{
@@ -402,13 +403,13 @@ h1{
       }
       h4{
         font-family: Raleway-Bold;
-        padding: 10px 50px 0 26%;
+        padding: 10px 50px 0 4%;
         line-height: 1.5;
       }
       p{
         font-family: Raleway-Regular;
-        padding: 20px 50px 0 26%;
-        font-size: 17px;
+        padding: 20px 50px 0 4%;
+        font-size: 20px;
       }
       h1:first-of-type{
         padding-top: 150px;
@@ -417,7 +418,7 @@ h1{
   }
   .second-section{
     .second-section-about{
-      width: 59.722222222%;
+      width: 90%;
       h4{
         margin-top: 30px;
         line-height: 1.5;
@@ -442,9 +443,6 @@ h1{
         display: flex;
         justify-content: space-between;
         padding: 0;
-      // position: relative;
-      // left: 0; right: 0;
-      // margin: 0 auto;
       width: 100%;
     }
     .flex-1{
@@ -468,12 +466,15 @@ h1{
 }
 .section-fourth{
   .section-fourth-content{
+    padding-top: 20px;
+
     width: 90%;
     position: relative;
     top: 7%;
     h1{
       position: relative;
       left: 5.21%;
+      top: 4%;
     }
     .flex-1{
       .flex-block{
@@ -493,6 +494,7 @@ h1{
 }
 .fifth-section{
   h1{
+    padding-top: 20px;
     color: #3357a1;
     font-family: PDF;
     position: relative;
@@ -539,19 +541,21 @@ h1{
     height: 100%;
     background-color: rgba(51, 87, 161, 0.75);
     color: white;
+    padding-bottom: 500px;
     .content-header{
       position: relative;
       top: 13.020833333%;
-      left: 20.138888889%;
+      left: 5%;
+      padding-top: 20px;
       h1{
         font-family: PDF-Medium;
         font-size: 45px;
       }
     }
     .content-text{
-      width: 35%;
+      width: 40%;
       position: relative;
-      left: 20.138888889%;
+      left: 5%;
       top: 18.89%;
       h2{
         font-family: PDF-Regular;
@@ -560,16 +564,20 @@ h1{
       }
     }
     .content-map{
-      position: relative;
-      left: 20%;
-      bottom: -22%;
-      width: 20%;
+      position: absolute;
+      right: -10%;
+      top: 19%;
+      width: 60%;
+      #buisness-center-map{
+        width: 280px;
+        height: 280px;
+      }
     }
   }
 }
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1440px){
+@media only screen and (min-width: 900px) and (max-width: 1440px){
   .home{
     .section-home-info{
       width: 44.236111111%;
@@ -589,6 +597,8 @@ h1{
         font-family: Raleway-Regular;
         padding: 20px 50px 0 26%;
         font-size: 17px;
+        line-height: 1.5;
+        font-weight: normal;
       }
       h1:first-of-type{
         padding-top: 150px;

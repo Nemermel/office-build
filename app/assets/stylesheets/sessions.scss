@@ -15,19 +15,23 @@
 			font-family: PDF-Medium;
 			font-size: 20px;
 			color: white;
+			margin-bottom: 10px;
 		}
 		label:last-of-type{
 			margin-top: 20px;
 		}
+		.form-control{
+			border-radius: 2px;
+		}
 		.login-submit{
 			border: none;
 			margin-top: 30px;
-			padding: 10px 60px;
+			padding: 10px 30px;
 			font-family: PDF-Medium;
 			font-size: 20px;
 			color: #3357a1;
 			background: white;
-			border-radius: 8px;
+			border-radius: 2px;
 		}
 	}
 }

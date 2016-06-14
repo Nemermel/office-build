@@ -3,7 +3,7 @@ $(document).ready(function() {
     var menu = null;
     var visible = 0;
     console.log($("body").width());
-    if ($("body").width() < 600) {
+    if ($("body").width() < 800) {
         menu = false;
         console.log(menu);
         visible = 1;
