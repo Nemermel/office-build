@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
 
   def show
     @comment = Comment.find(params[:id])
+    @micropost = Micropost.new
   end
 
   def new
