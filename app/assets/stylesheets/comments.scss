@@ -31,6 +31,11 @@ body{
 		p{
 			color: black;
 			font-family: Raleway-Regular;
+			font-size: 14px;
+			font-weight: normal;
+			line-height: 1.29;
+			letter-spacing: 0.4px;
+			color: #666666;
 		}
 		.row{
 			max-height: 100%;
@@ -48,7 +53,7 @@ body{
 						color: #3357a1; font-size: 20px;
 						font-family: Raleway-Bold;
 						span{
-							font-size: 16px; color: black;
+							font-size: 16px; color: #666666;
 							font-family: Raleway-Regular;
 						}
 					}
@@ -91,13 +96,19 @@ body{
 					}
 				}
 				h1{
-					padding-top: 50px;
+					padding-left: 20px;
+					padding-top: 35px;
 					color: white;
 					font-family: PDF;
 				}
 				min-height: 100%;
 				background: #3357a1;
 				.form-group{
+					padding-left: 20px;
+					.form-control{
+						width: 75%;
+						border-radius: 2px;
+					}
 					h2{
 						font-family: PDF-Medium;
 						color: white;
@@ -109,14 +120,15 @@ body{
 					margin-bottom: 20px;
 				}
 				.actions{
+					padding-left: 20px;
 					input{
 						border: none;
-						padding: 10px 100px;
+						padding: 10px 10px;
 						color: #3357a1;
 						font-size: 20px;
 						font-family: PDF-Medium;
 						background: white;
-						border-radius: 5px;
+						border-radius: 2px;
 					}
 				}
 			}
