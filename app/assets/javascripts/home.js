@@ -66,8 +66,8 @@ $(document).ready(function() {
         $('.modal-login').show();
     });
 
-    jQuery(".section-home-info>h1").fitText(1.2, { minFontSize: '30px', maxFontSize: '50px' });
-    jQuery(".section-home-info>p").fitText(1.2, { minFontSize: '15px', maxFontSize: '19px' });
-    jQuery(".section-home-info>h4").fitText(1.2, { minFontSize: '18px', maxFontSize: '21px' });
+    // jQuery(".section-home-info>h1").fitText(1.2, { minFontSize: '30px', maxFontSize: '60px' });
+    // jQuery(".section-home-info>p").fitText(1.2, { minFontSize: '15px', maxFontSize: '20px' });
+    // jQuery(".section-home-info>h4").fitText(1.2, { minFontSize: '18px', maxFontSize: '21px' });
 
 });

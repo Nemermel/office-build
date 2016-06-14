@@ -3,3 +3,4 @@ module MicropostsHelper
     @current_comment ||= Comment.find_by(id: params[:id])
 	end
 end
+
