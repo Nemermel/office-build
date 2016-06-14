@@ -57,6 +57,15 @@ body{
 			.right{
 				padding-bottom: 20%;
 				overflow: visible;
+				h3{
+					a{
+						color: white;
+						font-family: PDF-Medium;
+					}
+					a:hover{
+						color: #666666;
+					}
+				}
 				.logout-svg{
 					width: 5%;
 					img{

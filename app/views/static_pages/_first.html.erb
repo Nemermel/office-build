@@ -8,6 +8,10 @@
     <h4>+ 38 (044) 247-44-44</h4>
   </div>
   <div class="comments">
+    <% if logged_in? %>
+    <%= link_to image_tag("shape.svg"), comments_path,class: "comments-link hidden-xs hidden-sm" %>
+    <% else %>
     <%= link_to image_tag("shape.svg"), login_path,class: "comments-link hidden-xs hidden-sm" %>
+    <% end %>
   </div>
 </div>

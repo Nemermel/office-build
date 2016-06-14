@@ -1,6 +1,3 @@
-<% if logged_in? %>
-<% redirect_to comments_path %>
-<% else %>
 <div class="row">
   <div class="login-window col-md-4 col-md-offset-4">
     <%= form_for(:session, url: login_path) do |f| %>
@@ -15,4 +12,3 @@
     <% end %>
   </div>
 </div>
-<% end %>

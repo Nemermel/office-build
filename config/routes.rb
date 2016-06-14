@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
   resources :comments
+  
   root  'static_pages#home'
   match '/help',    to: 'static_pages#help',    via: 'get'
   
