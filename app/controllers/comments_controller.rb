@@ -3,6 +3,8 @@ class CommentsController < ApplicationController
     # @comments = Comment.all
     @comments = Comment.order('created_at DESC')
     @comment = Comment.new
+    #@microposts = Micropost.all
+    #@cathegory = Cathegory.find(@product.cathegory_id)
   end
 
   def show
