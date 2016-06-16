@@ -29,7 +29,7 @@ $(document).ready(function() {
     fixedElements: '#header, .footer',
     responsiveWidth: 0,
     responsiveHeight: 0,
-    sectionsColor : ['#ccc', '#3357a1','#e0e0e0','#efefef','#e0e0e0', '#e0e0e0'],
+    sectionsColor : ['#ccc', '#3357a1','#e0e0e0','#efefef','#fff', '#e0e0e0'],
     //Events
     afterLoad: function(anchorLink, index){
         $('#fp-nav .active span').css({

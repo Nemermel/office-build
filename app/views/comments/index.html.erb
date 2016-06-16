@@ -1,5 +1,7 @@
 <% if logged_in? %>
 <div class="cms-wrap-2">
+  <!-- Modal -->
+  <!-- Content -->
   <div class="row">
     <div class="left col-lg-7">
       <div class="cms-heading">
@@ -32,12 +34,33 @@
         </div>
         <%@microposts = comment.microposts%>
         <%@microposts.each do |micropost|%>
+        <div class="row comment-headings">
+          <div class="col-lg-4 col-lg-offset-4">
+            <p class="small-table-heading" style="margin-left: -20px;"><%= micropost.author %></p>
+          </div>
+        </div>
         <div class="table-body table-comments" style="width: 70%; float:right;">
           <div class="table-element">
             <p><%= micropost.content %></p>
           </div>
         </div>
         <%end%>
+        <div class="comment-container">
+          <%= form_for @micropost do |f|%>
+          <div class="field">
+          <%= f.text_field :author,placeholder:"Автор" %>
+          </div>
+          <div class="field textfield">
+          <%= f.text_field :content,placeholder:"Текст" %>
+          </div>
+          <div class="field">
+            <%= f.hidden_field :comment_id, :value => comment.id %>
+          </div>
+          <div class="actions">
+            <%= f.submit value:"Ответить" %>
+          </div>
+          <%end%>
+        </div>
         <%end%>
       </div>
     </div>
@@ -51,15 +74,15 @@
       <h1>Добавить новую заявку</h1>
       <%= form_for @comment do |f| %>
       <div class="form-group">
-        <h2>ФИО</h2>
+        <h2 class="rigt-group-header">ФИО</h2>
         <%= f.text_field :username, class: "form-control" %>
       </div>
       <div class="form-group">
-        <h2>Компания</h2>
+        <h2 class="rigt-group-header">Компания</h2>
         <%= f.text_field :title, class: "form-control" %>
       </div>    
       <div class="form-group">
-        <h2>Описание</h2>
+        <h2 class="rigt-group-header">Описание</h2>
         <%= f.text_field :context, class: "form-control" %>
       </div>
       <div class="actions">
