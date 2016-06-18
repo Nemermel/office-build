@@ -69,6 +69,11 @@ h1{
     h4{
       font-family: Raleway-Bold;
       padding: 10px 50px 0 26%;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    h4:first-of-type{
+      margin-bottom: -10px;
     }
     p{
       font-family: Raleway-Regular;
@@ -337,10 +342,12 @@ h1{
       h1{
         color: #3357a1;
         font-family: PDF;
-        text-align: center;       
+        text-align: center;
+        margin-bottom: -70px;       
       }
     }
     .slider-wrap{
+      height: 80%;
       padding-bottom: 40px;
       .slider{
         ul{
@@ -826,7 +833,7 @@ h1{
 @media only screen and (min-width: 900px) and (max-width: 1440px){
   .home{
     .section-home-info{
-      width: 44.236111111%;
+      width: 50%;
       h1{
         padding: 0 0px 0 26%;
         font-family: PDF;

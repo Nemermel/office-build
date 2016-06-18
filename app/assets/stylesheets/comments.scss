@@ -62,6 +62,10 @@ body{
 				.cms-heading{
 					padding-top: 30px;
 				}
+				.table-microposts{
+					display: none;
+					opacity: 0;
+				}
 				.table-headings{
 					color: #3357a1;
 					h3{
@@ -74,9 +78,19 @@ body{
 						margin-bottom: 20px;
 						border: 2px solid #3357a1;
 						padding: 10px;
+						.table-answer-link{
+							position: relative;
+							right: 0; bottom: 0;
+						}
 					}
 				}
+				.table-body.table-comments.table-microposts{
+					display: none;
+					width: 70%; float:right;
+				}
 				.comment-container{
+					opacity: 0;
+					display: none;
 					width: 100%;
 					float: left;
 					.textfield{

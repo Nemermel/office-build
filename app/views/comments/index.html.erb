@@ -18,7 +18,8 @@
             </div>
           </div>
         </div>
-        <%@comments.each do |comment| %>      
+
+        <%@comments.each_with_index do |comment, index| %>    
         <div class="row comment-headings">
           <div class="col-lg-4">
             <p class="small-table-heading"><%= comment.username %> <span><%= comment.title %></span></p>
@@ -30,28 +31,33 @@
         <div class="table-body table-comments">
           <div class="table-element">
             <p><%= comment.context %></p>
+            <div class="row">
+              <div class="col-lg-offset-10 col-lg-2">
+                <a href="#" class="table-microposts-link">Ответов: <%= comment.microposts.last.id %></a>
+              </div>
+            </div>
           </div>
         </div>
         <%@microposts = comment.microposts%>
         <%@microposts.each do |micropost|%>
-        <div class="row comment-headings">
+        <div class="row comment-headings table-microposts micropost-<%= index %>">
           <div class="col-lg-4 col-lg-offset-4">
             <p class="small-table-heading" style="margin-left: -20px;"><%= micropost.author %></p>
           </div>
         </div>
-        <div class="table-body table-comments" style="width: 70%; float:right;">
+        <div class="table-body table-comments table-microposts micropost-<%= index %>">
           <div class="table-element">
             <p><%= micropost.content %></p>
           </div>
         </div>
         <%end%>
-        <div class="comment-container">
+        <div class="comment-container comment-container-<%= index %>">
           <%= form_for @micropost do |f|%>
           <div class="field">
-          <%= f.text_field :author,placeholder:"Автор" %>
+            <%= f.text_field :author,placeholder:"Автор" %>
           </div>
           <div class="field textfield">
-          <%= f.text_field :content,placeholder:"Текст" %>
+            <%= f.text_field :content,placeholder:"Текст" %>
           </div>
           <div class="field">
             <%= f.hidden_field :comment_id, :value => comment.id %>
@@ -62,6 +68,7 @@
           <%end%>
         </div>
         <%end%>
+
       </div>
     </div>
     <div class="right col-lg-5">
