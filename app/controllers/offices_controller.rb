@@ -7,7 +7,9 @@ class OfficesController < ApplicationController
     @offices = Office.all
 
     @office = Office.new
+    
   end
+
 
   # GET /offices/1
   # GET /offices/1.json
@@ -71,4 +73,4 @@ class OfficesController < ApplicationController
     def office_params
       params.require(:office).permit(:name, :description, :image, :cost)
     end
-end
+  end

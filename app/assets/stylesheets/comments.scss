@@ -50,16 +50,21 @@ body{
 				.table{
 					padding-left: 20px;
 					.small-table-heading{
-						color: #3357a1; font-size: 20px;
+						color: #3357a1; font-size: 14px;
 						font-family: Raleway-Bold;
 						span{
-							font-size: 16px; color: #666666;
+							font-size: 14px; color: #666666;
 							font-family: Raleway-Regular;
+							padding-left: 10px;
 						}
 					}
 				}
 				.cms-heading{
 					padding-top: 30px;
+				}
+				.table-microposts{
+					display: none;
+					opacity: 0;
 				}
 				.table-headings{
 					color: #3357a1;
@@ -73,12 +78,58 @@ body{
 						margin-bottom: 20px;
 						border: 2px solid #3357a1;
 						padding: 10px;
+						.table-answer-link{
+							position: relative;
+							right: 0; bottom: 0;
+						}
+					}
+				}
+				.table-body.table-comments.table-microposts{
+					display: none;
+					width: 70%; float:right;
+				}
+				.comment-container{
+					opacity: 0;
+					display: none;
+					width: 100%;
+					float: left;
+					.textfield{
+						width: 52.5%;
+						input{
+							width: 90%;
+						}
+					}
+					.field{
+						float: right;
+						color: #666;
+						input{
+							margin: 0 5px;
+							padding: 3px;
+							border: none;
+							border: 2px solid #3357a1; 
+						}
+						input:last-of-type{
+							margin-right: 0;
+						}
+					}
+					.actions{
+						input{
+							color: white;
+							background-color: #3357a1;
+							border: none;
+							border-radius: 2px;
+							padding: 4px 8px;
+							font-family: Raleway-Bold;
+						}
 					}
 				}
 			}
 			.right{
 				padding-bottom: 20%;
 				overflow: visible;
+				.rigt-group-header{
+					font-size: 20px;
+				}
 				h3{
 					a{
 						color: white;

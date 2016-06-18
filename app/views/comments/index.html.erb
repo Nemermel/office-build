@@ -1,5 +1,7 @@
 <% if logged_in? %>
 <div class="cms-wrap-2">
+  <!-- Modal -->
+  <!-- Content -->
   <div class="row">
     <div class="left col-lg-7">
       <div class="cms-heading">
@@ -16,42 +18,78 @@
             </div>
           </div>
         </div>
-          <%@comments.each do |comment| %>      
-            <div class="row comment-headings">
-              <div class="col-lg-4">
-                <p class="small-table-heading"><%= comment.username %> <span><%= comment.title %></span></p>
+
+        <%@comments.each_with_index do |comment, index| %>    
+        <div class="row comment-headings">
+          <div class="col-lg-4">
+            <p class="small-table-heading"><%= comment.username %> <span><%= comment.title %></span></p>
+          </div>
+          <div class="col-lg-4 col-lg-offset-4">
+            <p class="text-right"><%= comment.created_at %></p>
+          </div>
+        </div>
+        <div class="table-body table-comments">
+          <div class="table-element">
+            <p><%= comment.context %></p>
+            <div class="row">
+              <div class="col-lg-offset-10 col-lg-2">
+                <a href="#" class="table-microposts-link">Ответов: <%= comment.microposts.last.id %></a>
               </div>
-              <div class="col-lg-4 col-lg-offset-4">
-                <p class="text-right"><%= comment.created_at %></p>
-              </div>
-            </div>
-          <div class="table-body table-comments">
-            <div class="table-element">
-              <p><%= comment.context %></p>
             </div>
           </div>
+        </div>
+        <%@microposts = comment.microposts%>
+        <%@microposts.each do |micropost|%>
+        <div class="row comment-headings table-microposts micropost-<%= index %>">
+          <div class="col-lg-4 col-lg-offset-4">
+            <p class="small-table-heading" style="margin-left: -20px;"><%= micropost.author %></p>
+          </div>
+        </div>
+        <div class="table-body table-comments table-microposts micropost-<%= index %>">
+          <div class="table-element">
+            <p><%= micropost.content %></p>
+          </div>
+        </div>
+        <%end%>
+        <div class="comment-container comment-container-<%= index %>">
+          <%= form_for @micropost do |f|%>
+          <div class="field">
+            <%= f.text_field :author,placeholder:"Автор" %>
+          </div>
+          <div class="field textfield">
+            <%= f.text_field :content,placeholder:"Текст" %>
+          </div>
+          <div class="field">
+            <%= f.hidden_field :comment_id, :value => comment.id %>
+          </div>
+          <div class="actions">
+            <%= f.submit value:"Ответить" %>
+          </div>
           <%end%>
+        </div>
+        <%end%>
+
       </div>
     </div>
     <div class="right col-lg-5">
       <h3 style="text-align: right; color:white; font-family: PDF-Medium;">
         <%= link_to "Выйти", logout_path, method: "delete" %>
         <% if admin? %>
-        	<%= link_to "Офисы", offices_path %>
+        <%= link_to "Офисы", offices_path %>
         <% end %>
       </h3>
       <h1>Добавить новую заявку</h1>
       <%= form_for @comment do |f| %>
       <div class="form-group">
-        <h2>ФИО</h2>
+        <h2 class="rigt-group-header">ФИО</h2>
         <%= f.text_field :username, class: "form-control" %>
       </div>
       <div class="form-group">
-        <h2>Компания</h2>
+        <h2 class="rigt-group-header">Компания</h2>
         <%= f.text_field :title, class: "form-control" %>
       </div>    
       <div class="form-group">
-        <h2>Описание</h2>
+        <h2 class="rigt-group-header">Описание</h2>
         <%= f.text_field :context, class: "form-control" %>
       </div>
       <div class="actions">

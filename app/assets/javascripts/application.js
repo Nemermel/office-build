@@ -15,3 +15,12 @@
 //= require bootstrap
 //= require fittext
 //= require_tree .
+$("#modal_path").on("click", function() {
+    $.ajax({
+        url: $(this).attr("href");
+        success: function(data) {
+            $(data).appendTo("body");
+            $('#myModal').modal('show');
+        }
+    });
+});

@@ -3,11 +3,11 @@ class CommentsController < ApplicationController
     # @comments = Comment.all
     @comments = Comment.order('created_at DESC')
     @comment = Comment.new
+    @micropost = Micropost.new
   end
 
   def show
     @comment = Comment.find(params[:id])
-    @micropost = Micropost.new
   end
 
   def new
@@ -21,7 +21,7 @@ class CommentsController < ApplicationController
     redirect_to comments_path
   end
 
-private def comment_params
-    params.require(:comment).permit(:title, :context, :username)
-  end
+  private def comment_params
+  params.require(:comment).permit(:title, :context, :username)
+end
 end

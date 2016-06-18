@@ -5,21 +5,19 @@ $(document).ready(function() {
     console.log($("body").width());
     if ($("body").width() < 800) {
         menu = false;
-        console.log(menu);
         visible = 1;
     } else {
         menu = true;
-        console.log(menu);
         visible = 3;
     }
-  $('#fullpage').fullpage({
+    $('#fullpage').fullpage({
     //Navigation
     menu: '#menu',
     lockAnchors: false,
-    anchors:['firstPage', 'secondPage','thirdPage','fourthPage','fifthPage','sixthPage'],
+    anchors:['main', 'about','infrastructure','services','free-spaces','contucts'],
     navigation: menu,
     navigationPosition: 'right',
-    navigationTooltips: ['Главная', 'О компании', 'Инфраструктура', 'Услуги', 'Свободные Помещения', 'Контакты'],
+    navigationTooltips: ['Главная', 'О компании', 'Инфраструктура', 'Услуги', 'Свободные помещения', 'Контакты'],
     showActiveTooltip: true,
     slidesNavigation: true,
     slidesNavPosition: 'bottom',
@@ -31,26 +29,18 @@ $(document).ready(function() {
     fixedElements: '#header, .footer',
     responsiveWidth: 0,
     responsiveHeight: 0,
-    sectionsColor : ['#ccc', '#3357a1','#e0e0e0','#efefef','#e0e0e0', '#e0e0e0'],
+    sectionsColor : ['#ccc', '#3357a1','#e0e0e0','#efefef','#fff', '#e0e0e0'],
     //Events
     afterLoad: function(anchorLink, index){
-        console.log(anchorLink);
-        if (anchorLink === 'firstPage') {
-            $('.home>h1').addClass('animated fadeInLeft');
-        }
-        if(anchorLink === 'secondPage'){
-            $('.second>h1').addClass('animated slideInDown');
-        }
+        $('#fp-nav .active span').css({
+            background: 'none',
+            border: '2px solid #666',
+            borderRadius: '50%'
+        });
     }
-  });
+});
     $('#fp-nav span').css({
-        background: '#e6e6e6'
-    });
-
-    $('#fp-nav .active span').css({
-        background: 'none',
-        border: '2px solid #e6e6e6',
-        borderRadius: '50%'
+        background: '#666'
     });
 
     jQuery('.slider').lbSlider({
@@ -65,9 +55,4 @@ $(document).ready(function() {
         console.log("click");
         $('.modal-login').show();
     });
-
-    // jQuery(".section-home-info>h1").fitText(1.2, { minFontSize: '30px', maxFontSize: '60px' });
-    // jQuery(".section-home-info>p").fitText(1.2, { minFontSize: '15px', maxFontSize: '20px' });
-    // jQuery(".section-home-info>h4").fitText(1.2, { minFontSize: '18px', maxFontSize: '21px' });
-
 });
