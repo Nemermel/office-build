@@ -284,10 +284,13 @@
         font-size: 3.4em;
       }
       h4:first-of-type{
-        margin-bottom: 6%;
+        margin-bottom: 4%;
+      }
+      h4:last-of-type{
+        margin-bottom: 0;
       }
       img{
-        margin-top: 10%;
+        margin-top: 5%;
       }
     }
   }
@@ -321,10 +324,10 @@
         min-width: 50%;
         .overlay{
           h2{
-            font-size: 5em;
+            font-size: 3em;
           }
           p{
-            font-size: 3em;
+            font-size: 2.2em;
             line-height: 1.2em;
           }
         }
@@ -338,10 +341,10 @@
         min-width: 1%;
         .overlay{
           h2{
-            font-size: 4em;
+            font-size: 3em;
           }
           p{
-            font-size: 2.6em;
+            font-size: 2em;
             line-height: 1.2em;
           }
         }
@@ -357,15 +360,19 @@
     top: 5%;
     h1{
       position: relative;
+      padding-top: 3%;
       left: 5.21%;
       font-size: 7em;
     }
     .flex-1{
-      margin-top: 3%;
+      margin-top: 2.7%;
       .flex-block{
         width: 33.3333333%;
         img{
-          width: 25%;
+          width: 24%;
+        }
+        .car-svg{
+          width: 75%;
         }
         .flex-block-text{
           position: relative;
@@ -373,7 +380,7 @@
           margin: 0 auto;
           width: 46%;
           p{
-            font-size: 6em;
+            font-size: 4.2em;
             line-height: 1.2em;
           }
         }
