@@ -571,7 +571,7 @@ h1{
           margin-bottom: 0px;
         }
         p{
-          line-height: 1;
+          line-height: 1.1;
         }
         box-sizing: border-box;
         padding: 1em;
@@ -685,6 +685,37 @@ h1{
           margin: 0 auto;
           width: 200px;
           height: 200px;
+        }
+      }
+    }
+  }
+}
+
+@media  only screen and (width: 414px) {
+  .section-third-content{
+    .flex-1{
+      li{
+        h2{
+          margin-top: 2px;
+          margin-bottom: 0px;
+          line-height: 1;
+          font-size: 1.6em;
+        }
+        p{
+          font-size: 1.4em;
+          line-height: 1;
+        }
+      }
+    }
+    .flex-2{
+      li{
+        h2{
+          margin-top: 2px;
+          margin-bottom: 0px;
+        }
+        p{
+          font-size: 1.3em;
+          line-height: 1;
         }
       }
     }
