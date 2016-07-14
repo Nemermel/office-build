@@ -15,8 +15,8 @@ body{
 
 
 a[href^="tel"]{
-    color:inherit;
-    text-decoration:none;
+  color:inherit;
+  text-decoration:none;
 }
 
 h1{
@@ -166,6 +166,7 @@ h1{
       list-style: none;
       display: -webkit-flex;
       display: flex;
+      display: -webkit-box;
       justify-content: space-between;
       padding: 0;
       // position: relative;
@@ -188,6 +189,7 @@ h1{
     .flex-1{
       display: -webkit-flex;
       display: flex;
+      display: -webkit-box;
       flex-wrap:wrap;
       -webkit-flex-wrap:wrap;
       align-items: baseline;
@@ -244,10 +246,10 @@ h1{
   }
 }
 
-  #section6{
-    background-size: cover;
-    background-image: url(BG_contacts.png);
-  }
+#section6{
+  background-size: cover;
+  background-image: url(BG_contacts.png);
+}
 
 @media only screen and (max-width:320px) {
   .home{
@@ -501,7 +503,7 @@ h1{
     .flex-1{
       flex-wrap: wrap;
       -webkit-flex-wrap: wrap;
-      
+
       margin-top: 20px;
       li{
         max-width: 100%;
@@ -720,6 +722,8 @@ h1{
       }
       .flex-1{
         flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+
         li{
           max-width: 600px;
           box-sizing: border-box;
