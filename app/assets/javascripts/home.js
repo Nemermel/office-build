@@ -55,4 +55,12 @@ $(document).ready(function() {
         console.log("click");
         $('.modal-login').show();
     });
+    //TODO remade it in js not cofee
+    // $(".table-microposts-link").click ->    
+    // console.log 'wow'
+    // container = $(this).parent().parent().parent().parent()   
+    // index = $(container).index('.table-body.table-comments:not(.table-microposts)')   
+    // $('.micropost-' + index).show().animate {opacity: 1},1000   
+    // $('.comment-container-' + index).show().animate {opacity: 1},1000   
+    // $(".")
 });
