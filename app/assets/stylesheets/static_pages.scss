@@ -532,6 +532,8 @@ h1{
         box-sizing: border-box;
         padding: 1em;
         min-width: 100%;
+        -webkit-flex: 1 1 100%;
+
       }
     }
     .flex-2{
@@ -541,6 +543,8 @@ h1{
       padding-bottom: 40px;
       li{
         max-width: 40%;
+        -webkit-flex: 1 1 40%;
+
         box-sizing: border-box;
         padding: 1em;
         min-width: 50%;
@@ -751,6 +755,8 @@ h1{
           box-sizing: border-box;
           padding: 1em;
           min-width: 100%;
+        -webkit-flex: 1 1 600px;
+
         }
       }
       .flex-2{
@@ -758,6 +764,8 @@ h1{
 
         li{
           max-width: 345px;
+        -webkit-flex: 1 1 345px;
+
           box-sizing: border-box;
           padding: 1em;
           min-width: 1%;
