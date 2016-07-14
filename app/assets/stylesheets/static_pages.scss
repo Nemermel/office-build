@@ -177,6 +177,7 @@ h1{
       display: -webkit-box;
       @include flexbox();
       justify-content: space-between;
+      -webkit-justify-content: space-between;
       padding: 0;
       // position: relative;
       // left: 0; right: 0;
