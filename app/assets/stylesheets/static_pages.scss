@@ -317,10 +317,6 @@ h1{
     }
     .flex-1,.flex-2{
       width: 100%;
-      // li{
-      //   flex:1;
-      //   -webkit-flex: 1 1 400px;
-      // }
     }
     .flex-1{
       flex-wrap: wrap;
@@ -332,6 +328,14 @@ h1{
         box-sizing: border-box;
         padding: 1em;
         min-width: 100%;
+        h2{
+          margin-top: 2px;
+          margin-bottom: 0px;
+          line-height: 1;
+        }
+        p{
+          font-size: 1em;
+        }
       }
     }
     .flex-2{
@@ -344,6 +348,15 @@ h1{
         box-sizing: border-box;
         padding: 1em;
         min-width: 50%;
+        h2{
+          margin-top: 2px;
+          margin-bottom: 0px;
+          line-height: 1;
+        }
+        p{
+          font-size: 1em;
+          line-height: 1;
+        }
       }
     }
   }
@@ -533,7 +546,16 @@ h1{
         padding: 1em;
         min-width: 100%;
         -webkit-flex: 1 1 100%;
-
+        h2{
+          margin-top: 2px;
+          margin-bottom: 0px;
+          line-height: 1;
+          font-size: 1.6em;
+        }
+        p{
+          font-size: 1.4em;
+          line-height: 1;
+        }
       }
     }
     .flex-2{
@@ -544,7 +566,13 @@ h1{
       li{
         max-width: 40%;
         -webkit-flex: 1 1 40%;
-
+        h2{
+          margin-top: 2px;
+          margin-bottom: 0px;
+        }
+        p{
+          line-height: 1;
+        }
         box-sizing: border-box;
         padding: 1em;
         min-width: 50%;
@@ -764,7 +792,7 @@ h1{
 
         li{
           max-width: 345px;
-        -webkit-flex: 1 1 345px;
+          -webkit-flex: 1 1 345px;
 
           box-sizing: border-box;
           padding: 1em;
