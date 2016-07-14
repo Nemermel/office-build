@@ -236,6 +236,11 @@ h1{
   }
 }
 
+  #section6{
+    background-size: cover;
+    background-image: url(BG_contacts.png);
+  }
+
 @media only screen and (max-width:320px) {
   .home{
     .back-1{
@@ -370,6 +375,7 @@ h1{
       }
     }
   }
+
   .sixth-section{
     .back-2{
       position: absolute;
