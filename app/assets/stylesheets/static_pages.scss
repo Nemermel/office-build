@@ -45,12 +45,11 @@ h1{
 .home>h1,.second>h1{
 	margin-top: 0;
 }
-.home{
-  background: url(BG.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+#section1{
   background-size: cover;
+  background-image: url(BG.png);
+}
+.home{
   .back-1{
     position: absolute;
     left: 0;
@@ -149,7 +148,6 @@ h1{
 }
 
 .section-third{
-  overflow-x: hidden;
   .section-third-content{
     position: relative;
     h1{
