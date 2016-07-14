@@ -164,6 +164,7 @@ h1{
 
     .flex-1,.flex-2{
       list-style: none;
+      display: -webkit-flex;
       display: flex;
       justify-content: space-between;
       padding: 0;
@@ -188,6 +189,7 @@ h1{
       display: -webkit-flex;
       display: flex;
       flex-wrap:wrap;
+      -webkit-flex-wrap:wrap;
       align-items: baseline;
       .flex-block{
         img{
@@ -300,6 +302,7 @@ h1{
     }
     .flex-1{
       flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
       margin-top: 20px;
       li{
         max-width: 100%;
@@ -310,6 +313,7 @@ h1{
     }
     .flex-2{
       flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
       padding-bottom: 40px;
       li{
         max-width: 40%;
@@ -496,6 +500,8 @@ h1{
     }
     .flex-1{
       flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      
       margin-top: 20px;
       li{
         max-width: 100%;
@@ -506,6 +512,8 @@ h1{
     }
     .flex-2{
       flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+
       padding-bottom: 40px;
       li{
         max-width: 40%;
