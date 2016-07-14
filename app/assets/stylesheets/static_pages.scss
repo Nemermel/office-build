@@ -11,6 +11,14 @@ body{
   font-feature-settings: "lnum";
 }
 
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
 .section{overflow-x: hidden;}
 
 
@@ -167,6 +175,7 @@ h1{
       display: -webkit-flex;
       display: flex;
       display: -webkit-box;
+      @include flexbox();
       justify-content: space-between;
       padding: 0;
       // position: relative;
@@ -190,6 +199,7 @@ h1{
       display: -webkit-flex;
       display: flex;
       display: -webkit-box;
+      @include flexbox();
       flex-wrap:wrap;
       -webkit-flex-wrap:wrap;
       align-items: baseline;
